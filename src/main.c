@@ -5,7 +5,7 @@ int main()
 {
     if (SDL_Init(SDL_INIT_VIDEO) > 0)
     {
-        printf("SDL_Init failed with error: %s\n", SDL_GetError());
+        fprintf(stderr, "SDL_Init failed with error: %s\n", SDL_GetError());
         return EXIT_FAILURE;
     }
 
@@ -19,7 +19,7 @@ int main()
 
     if(!window)
     {
-        printf("SDL_Window failed with error: %s\n", SDL_GetError());
+        fprintf(stderr, "SDL_Window failed with error: %s\n", SDL_GetError());
         return -1;
     }
 
@@ -27,7 +27,7 @@ int main()
 
     if(!window_surface)
     {
-        printf("SDL_Surface failed with error: %s\n", SDL_GetError());
+        fprintf(stderr, "SDL_Surface failed with error: %s\n", SDL_GetError());
         return -1;
     }
 
